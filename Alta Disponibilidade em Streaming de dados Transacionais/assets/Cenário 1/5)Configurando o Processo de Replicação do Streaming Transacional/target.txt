@@ -1,0 +1,17 @@
+Target:
+
+edit params repintan
+
+ replicat repintan
+ SETENV(ORACLE_SID='orcl')
+ DBOPTIONS INTEGRATEDPARAMS(parallelism 4)
+ AssumeTargetDefs
+ DiscardFile ./dirrpt/rpdw.dsc, purge
+ USERID ggadmin, PASSWORD ggadmin
+ MAP appuser.*, target appuser.*;
+
+dblogin userid ggadmin
+
+add replicat repintan integrated exttrail ./dirdat/pn
+
+start replicat repintan

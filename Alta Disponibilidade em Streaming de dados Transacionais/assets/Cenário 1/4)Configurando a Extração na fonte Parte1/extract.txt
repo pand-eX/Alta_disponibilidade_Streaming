@@ -1,0 +1,38 @@
+Source:
+
+dblogin userid ggadmin
+
+add trandata appuser.* cols *
+
+register extract insrc database
+add extract insrc, integrated tranlog, begin now
+edit params insrc
+
+extract insrc
+ SETENV(ORACLE_SID="orcl")
+ SETENV(ORACLE_HOME="/u01/app/oracle/product/12.2.0/dbhome_1")
+ USERID ggadmin, PASSWORD ggadmin
+ TRANLOGOPTIONS IntegratedParams (max_sga_size 256)
+ EXTTRAIL ./dirdat/in
+ LOGALLSUPCOLS
+ UPDATERECORDFORMAT COMPACT
+ TABLE appuser.*;
+
+ add exttrail ./dirdat/in, extract insrc, megabytes 10
+
+ add extract pumpint, exttrailsource ./dirdat/in
+
+ edit params pumpint
+
+ EXTRACT pumpint
+ RMTHOST devserver, MGRPORT 7809
+ RMTTRAIL ./dirdat/pn
+ TABLE appuser.*;
+
+add rmttrail ./dirdat/pn, extract pumpint, megabytes 10
+
+start extract intsrc
+
+start extract pumpint
+
+

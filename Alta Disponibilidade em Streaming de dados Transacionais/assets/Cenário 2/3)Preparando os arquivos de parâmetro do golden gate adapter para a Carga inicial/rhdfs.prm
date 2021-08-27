@@ -1,0 +1,11 @@
+REPLICAT rhdfs
+-- Trail file for this example is located in "dirdat/or" directory
+-- Command to add REPLICAT
+-- add replicat rhdfs, exttrail dirdat/or
+--DDLERROR default discard
+setenv HADOOP_COMMON_LIB_NATIVE_DIR=/opt/hadoop/lib/native
+DDL include all
+TARGETDB LIBFILE libggjava.so SET property=dirprm/hdfs.props
+REPORTCOUNT EVERY 1 MINUTES, RATE
+GROUPTRANSOPS 10000
+MAP ggtest.*, TARGET bdtest.*;

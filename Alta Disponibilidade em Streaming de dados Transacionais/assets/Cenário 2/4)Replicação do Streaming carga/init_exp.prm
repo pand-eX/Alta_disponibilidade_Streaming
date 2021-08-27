@@ -1,0 +1,7 @@
+SOURCEISTABLE
+userid ggadmin@orcl,password ggadmin
+--RMTHOSTOPTIONS
+RMTHOST hdpmaster, MGRPORT 7839
+RMTFILE /u01/oggbd/dirdat/initld, MEGABYTES 2, PURGE
+--DDL include objname ggtest.*
+TABLE ggtest.*;

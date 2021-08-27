@@ -1,0 +1,14 @@
+--passive REPLICAT for initial load irhdfs
+-- Trail file for this example is located in "dirdat/initld" 
+-- Command to run REPLICAT:
+-- ./replicat paramfile dirprm/irhdfs.prm reportfile dirrpt/ini_rhdfs.rpt
+SPECIALRUN
+END RUNTIME
+EXTFILE /u01/oggbd/dirdat/initld
+--DDLERROR default discard
+setenv HADOOP_COMMON_LIB_NATIVE_DIR=/opt/hadoop/lib/native
+DDL include all
+TARGETDB LIBFILE libggjava.so SET property=dirprm/hdfs.props
+REPORTCOUNT EVERY 1 MINUTES, RATE
+GROUPTRANSOPS 10000
+MAP ggtest.*, TARGET bdtest.*;
