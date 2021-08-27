@@ -199,7 +199,7 @@ Agora damos um > source .bash_profile para ir para o diretório cd $GGH e vamos 
 Agora vamos inicializar o Manager do Golden Gate na fonte > start manager 
 Pronto a fonte está pronta agora no Destino no cluster hadoop vamos dar um stop no firewall dos cluster > sudo service firewalld stop nas 3 máquinas Master, Slave1 e Slave2
 
-![11](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/11.png
+![11](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/11.png)
 
 Para que isso não atrapalhe. E agora vamos inicializar o cluster com o comando >> $HADOOP_HOME/sbin/start-dfs.sh)
 
