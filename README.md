@@ -38,7 +38,7 @@ Alta disponbilidade é a capacidade de um sistema executar a sua função de for
 
 O Termo Alta disponibilidade, quando aplicado a sistemas de tecnologia, significa que a aplicação ou serviço em questão está permanentemente disponível, independentemente da hora do dia, local ou outros fatores que possam influenciar a disponibilidade de tal recursos.
 
-![1]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/1.png
+![1](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/1.png)
 
 De Acordo com uma pesquisa recente feita com pequenas e médias empresas, a principal causa do tempo de inatividade foi falha no Hardware (55%), seguida por falha humana (22%), falha de software (18%) e desastres naturais (5%). O tempo médio de recuperação foi de aproximadamente 30h.
 
@@ -52,39 +52,40 @@ De Acordo com uma pesquisa recente feita com pequenas e médias empresas, a prin
 
 RAID é a abreviação para Redundant Array of Independent Disks, ou em tradução livre, conjunto redundante de discos independentes. Essa tecnologia é baseada em montar arranjos onde dois ou mais hard drives e/ou memórias SSDS trabalharão em conjunto, com o intuito de aprimorar a segurança e performance de computadores, servidores e storages.
 
-![2]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/2.png
+![2](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/2.png)
 
 
 
-![3]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/3.png
+![3](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/3.png)
 
 A lógica por traz do raid0 consiste em distribuir os dados a serem armazenados no sistema gravando a informação particionada em diversos HDs de forma simultânea, ou seja, dessa forma tanto a gravação quanto as leituras dos dados utilizam todos os discos do arranjo sem necessidade de nem um cálculo para geração de paridade o que é feito no RAID5. Em consequência do alto desempenho do RAID0 nós perdemos em questão de segurança porque ele não proporciona nem uma tolerância a falha eu não usaria RAID 0 em nem um sistema que estou trabalhando, mas é bom saber o que é possível.
-![4]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/4.png
 
-![5]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/5.png
+![4](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/4.png)
+
+![5](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/5.png)
 
 
 O RAID5 é uma das principais alternativa para ambiente profissional de Produção e partir disso temos várias variantes de arranjos de discos. O método é bastante usado em servidores e nós precisamos de pelo menos 3 discos rígidos instalados e ainda uma camada de redundância o que claro acaba sacrificando um pouco da capacidade do sistema para segurança dos dados no RAID5 os bits de paridade eles são criados e acrescentado aos dados então são gravados de forma alternadas nós discos caso algum do HDs venha a falhar nem um dado será perdido porque a paridade é a segurança do sistema que possibilidade a reconstrução dos dados sem perda de informação o RAID5 é muito recomendado para aplicações do dia-a-dia. Claro que teremos uma perda de performance porque o objetivo é garantir Alta Disponibilidade que você não vai perde os dados e seu sistema vai continuar rodando mesmo que fique mais lento durante um período até reconstrução dos dados mas mesmo assim o sistema vai estar up and running. Na AWS podemos configurar as RAID.
 
-![6]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/6.png
+![6](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/6.png)
 
 Uma explicação da própria Cloudera o RAID é basicamente utilizado para redundância entretanto, o HDFS já tem isso internamente o HDFS foi construído levando em consideração a falha de hardware e por isso que um bloco de dados no HDFS é replicado pelo menos 3 vezes. Mas podemos usar claro nos NodeMaster um RAID até porque se você perde o NodeMaster você perde o cluster temos que claro garantir alguma redundância no NodeMaster mas é claro isso e 1 máquina no seu ambiente ou 2 máquinas se estiver trabalhando com alta disponibilidade os DataNodes pode ser centenas ou milhares nós não utilizamos RAID.
 
 ## Oracle GoldenGate
 
-![14]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/14.png
+![14](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/14.png)
 
-![15]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/15.png
+![15](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/15.png)
 
 ## Oracle Big Data Platform
 
-![16]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/16.png
-![17]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/17.png
-![18]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/18.png
+![16](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/16.png)
+![17](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/17.png)
+![18](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/18.png)
 
 
-![19]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/19.png
-![20]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/20.png
+![19](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/19.png)
+![20](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/20.png)
 
 
 ## Em que momento devemos aplicar um ELT? Existe basicamente uma pequena regra que ajuda por escolher uma arquitetura ou outra.
@@ -97,59 +98,59 @@ Uma explicação da própria Cloudera o RAID é basicamente utilizado para redun
 
 O ODI é na verdade uma grande plataforma de integração de dados.
 
-![21]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/21.png
+![21](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/21.png)
 
 O Oracle Data Integrator (ODI) é uma ferramenta de extração, carregamento e transformação (ELT) (Em contraste com a abordagem comum ETL) produzida pela Oracle que oferece um ambiente gráfico para criar, gerenciar e manter processos de integração de dados em sistemas de Business Intelligence e Big Data.
 ODI oferece KMs (Knowledge Modules) para fontes e destinos.
 
-![22]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/22.png
+![22](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/22.png)
 
-![23]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/23.png
+![23](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/23.png)
 
 O Oracle GoldenGate é para integração de dados em tempo real. Esse é o próximo passo na evolução em processamento de dados. O Oracle GoldenGate é um Pacote de Software para integração e replicação de dados em tempo real em Ambientes de TI heterogêneos.
 O Oracle GoldenGate permite soluções de alta disponibilidade, integração de dados em tempo real, captura de dados transacionais, replicação de dados, transformações e verificação entre sistemas corporativos operacionais e analíticos.
 O Oracle GoldenGate oferece uma plataforma de Software de replicação baseada em Log em tempo real para atender às necessidades dos aplicativos atuais orientados por transações. O Software fornece captura, roteamento, transformação e entrega de dados transacionais em bancos de dados heterogêneos em tempo real. Usando essa tecnologia, os clientes podem obter disponibilidade contínua para sistemas críticos e integração de dados em tempo real para acesso rápido e fácil a dados atuais e precisos em bancos de dados homogêneos e heterogêneos.
 
 
-![24]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/24.png
+![24](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/24.png)
 
 Ele vai trabalhar apenas nas modificações por isso o conceito do CDC (Change Data Capture), ou seja, ele vai olhar para aquilo que foi modificado se não ouve modificação porque ele vai levar os dados? No caso de uma query SQL isso é muito mais difícil se você não tiver um campo especificando a DATA de modificação do registro eu nem tenho como saber se o registro foi modificado ou não.
 
-![25]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/25.png
+![25](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/25.png)
 
 
 Independentemente de trabalhar com Big Data ou qualquer outro tipo de sistema eu tenho a Extração o Pump e o Collector, ou seja, vou coletar os dados da fonte vou movimentar para o destino e vou coletar e gerar um Trail File. Eles simplesmente converteram o Trail File para um formato que possa ser lido pelo HDFS, HBase e etc... 
 
 Imagine que você tem banco de dados relacionais espalhado por regiões geográficas diferentes e você precisa trazer esses dados para o seu Data Lake dependendo do caso o Golden Gate pode ser a melhor opção. O Golden Gate não é evasivo, ou seja, ele não vai ao sistema ele vai aos LOG’s com isso ele praticamente não tem impacto, o impacto é quase mínimo na fonte ele traz apenas as mudanças dos dados. Então o volume de dados que ele trafega é muito menor e com isso você vai manter a integridade das transações, ou seja, se eu tiver vários bancos de dados espalhados por várias regiões o Golden Gate pode trazer esse streaming transacional para o seu Data Lake. Se eu fizer isso com o ODI significa ter que executar várias Querys em cada um desses banco de dados espalhados geograficamente, se eu utilizar o Sqoop é a mesma coisa o Sqoop também executa um query no sistema fonte, se eu tentar usar o apache flume eu não consigo trazer os Logs transacionais, se eu tentar usar o apache Kafka eu teria que desenvolver um programa em Java para fazer a leitura dos arquivos de Logs então a empresa tem que avaliar o que é melhor. Muita empresa opta por gerar um arquivo txt todo dia a noite movimenta o txt para o outro lado durante a noite pega o txt e carrega no Data Lake, ok funciona também, mas não é integração em tempo real.
 
-![26]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/26.png
+![26](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/26.png)
 
 Entretanto o Golden Gate não permite você fazer transformação nós dados, isso mesmo não existe ferramenta perfeita, ou seja, se eu quiser transformar esses dados eu tenho que carregar no Data Lake e aplicar depois algum processo. Podendo aplicar o ODI.
 
-![27]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/27.png
+![27](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/27.png)
 
 Então o ODI ele poderia ser usado para pegar os dados por exemplo lá no Hive. Sendo um Staging Area eu pego o ODI conecto nesse Hive processo esses dados transformo os dados de acordo com os requisitos de negócio e carrego em uma outra instancia do Hive e assim alimentar uma ferramenta analítica. O ODI tem uma vantagem que você pode isolar o modelo lógico, ou seja, se hoje eu tenho o Hive eu extraio os dados e levo para um destino, mas a lógica dessa transformação fica no ODI se amanhã não estiver usando o HIVE é só tirar ele e colocar a nova solução e a minha lógica de transformação é a mesma. Se você não quiser usar o ODI você pode também usar uma linguagem Python, R, Java, Scala desenvolve uma aplicação para fazer a manipulação de dados roda o processo no banco de dados
 
-![28]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/28.png
-![29]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/29.png
-![30]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/30.png
+![28](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/28.png)
+![29](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/29.png)
+![30](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/30.png)
 
 
 
 ## irei implementar 2 projetos eles são: 
 
-![7]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/7.png
+![7](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/7.png)
 
 No cenário 1, iremos trabalhar com replicação entre bancos relacionais. Vamos montar 2 Databases relacionais e faremos uma replicação em tempo real usando streaming relacional. A medida que uma transação for feita no Database1 nós vamos selecionar quais dados dessa transação serão levados para o DataBase2. Existe várias replicações desse cenário podemos criar um banco de dados de Backup, podemos cria um banco de dados de leitura considerando claro o DataBase2, podemos criar um banco de dados apenas para consulta, poderíamos criar uma espécie de Subset do Database1. O database1 seria o banco principal de uma aplicação transacional qualquer como um CRM, ERP e você não precisa de todos aqueles dados transacionais então iremos selecionar um Subset “alguns” e leva isso para um 2 Database e nesse 2 você pode utilizar uma ferramenta de análise de dado ou você pode aplicar um outro modelo de Machine Learning e etc.
 
 
 
-![8]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/8.png
+![8](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/8.png)
 
 Esse é um trabalho detalhista precisa ficar atento a tudo que está sendo feito eventualmente o DBA tem que ser envolvido o engenheiro de dados não tem que realizar todas as configurações de privilégio do banco de dados quem faz isso é o DBA o Engenheiro de dados configura o pipeline de dados então a configuração do Golden Gate pode ser feito pelo engenheiro de dados mas a configuração do banco de dados em si normalmente e trabalho de um DBA. No momento que você implementa a ligação entre os dois bancos o que nós temos é na verdade um Pipeline de Streaming transacional em tempo real se o destino cair por algum motivo eu não perco as transações quando o banco de dados destino voltar nós teremos todas as transações na fila para serem executadas. Fiz outro exemplo deletando um dos inserts que fiz e ele faz a remoção no destino na mesma hora. O da Esquerda é o banco fonte de produção e o do lado direito é a replica em REAL TIME das transações da fonte.
 Temos um Streaming transacional em tempo real onde os dados da fonte são automaticamente atualizados no destino em nível de TRANSAÇÃO, aqui eu fiz a transação da tabela inteira, mas eu poderia selecionar apenas algumas colunas dessa tabela, apenas algumas linhas especificas dentro da minha transação, eu poderia eventualmente colocar uma regra para geração de conflitos se eu tiver dois registros conflitando no destino eu posso definir qual vai ser a regra final tudo isso pode ser feito com Golden Gate.
 
-![9]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/9.png
+![9](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/9.png)
 
 
 Iremos construir um ambiente de replicação entre um Banco Relacional e o HDFS considerando claro que o HDFS seria o nosso Data Lake.
@@ -187,7 +188,7 @@ A possibilidade de dar de cara com erro durante todo esse processo é muito gran
 
 Vamos lá !!!
 
-![10]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/10.png
+![10](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/10.png)
 
 
 Com as 4 VM inicializadas elas são o DataBase server – Prod com a fonte e o Cluster hadoop com o NameNode(máster) e os 2 DataNode(slaves)
@@ -198,11 +199,11 @@ Agora damos um > source .bash_profile para ir para o diretório cd $GGH e vamos 
 Agora vamos inicializar o Manager do Golden Gate na fonte > start manager 
 Pronto a fonte está pronta agora no Destino no cluster hadoop vamos dar um stop no firewall dos cluster > sudo service firewalld stop nas 3 máquinas Master, Slave1 e Slave2
 
-![11]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/11.png
+![11](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/11.png
 
-Para que isso não atrapalhe. E agora vamos inicializar o cluster com o comando >> $HADOOP_HOME/sbin/start-dfs.sh
+Para que isso não atrapalhe. E agora vamos inicializar o cluster com o comando >> $HADOOP_HOME/sbin/start-dfs.sh)
 
-![12]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/12.png
+![12](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/12.png)
 
 
 Comando jps para verificar se está tudo ok! E pronto o cluster está perfeitamente rodando.
@@ -219,7 +220,7 @@ Perfeito conseguimos fazer a extração inicial do nosso banco fonte e levamos o
 
 Agora vamos ativar a replicação esse é o último passo na fonte agora cada vez que um registro foi inserido no banco de dados Oracle ele seja automaticamente enviado para o HDFS. Agora abrimos o console do Golden Gate > no diretório cd $GGH não esquece do source .bash_profile e usamos o comando > ./ggsci e agora vamos fazer a editar o parâmetro para replicação em tempo real comando> edit params ggext (ou seja, a extração do squema, ggtest) colocando os parâmetros vamos ativar a extração online> dblogin userid ggadmin@orcl, password ggadmin pronto agora o Golden Gate conectou no banco de dados vamos agora registrar a extração comando> register extract GGEXT database e nesse momento ele vai ativar a extração uma vez que você ativa a extração ela fica ativa até que você execute um comando para desativar
 
-![13]https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/13.png
+![13](https://github.com/pand-eX/Alta_disponibilidade_Streaming/blob/main/Alta%20Disponibilidade%20em%20Streaming%20de%20dados%20Transacionais/assets/13.png)
 
 
 Pronto minha extração já está registrada agora vou mandar inicializar minha extração comando é > add extract ggext, INTEGRATED TRANLOG, BEGIN NOW (perfeito extração já começou a replicação já está acontecendo online. Agora temos que configurar o destino
